@@ -1,0 +1,20 @@
+appId: com.tauri.dev
+productName: tauri-electron-template
+directories:
+  output: "src-electron/target/${version}"
+  buildResources: build
+files:
+  - dist
+  - src-electron/dist
+linux:
+  target:
+    - appImage
+    - flatpak
+  category: Utility
+appImage:
+  artifactName: ${productName}-${version}.${ext}
+flatpak:
+  artifactName: ${productName}-${version}.${ext}
+  runtimeVersion: 23.08
+  baseVersion: 23.08
+npmRebuild: false

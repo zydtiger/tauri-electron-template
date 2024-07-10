@@ -1,0 +1,34 @@
+{
+  "name": "tauri-electron-template",
+  "description": "A cross-platform tauri+electron template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src-electron/dist/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "dev:electron": "vite -c src-electron/vite.config.ts",
+    "build:electron": "tsc && vite build -c src-electron/vite.config.ts && electron-builder -c src-electron/electron-builder.yml",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "prettify": "prettier --write ."
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3",
+    "prettier": "^3.3.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vite-plugin-electron": "^0.28.7"
+  }
+}
